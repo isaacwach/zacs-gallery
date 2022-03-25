@@ -7,8 +7,8 @@ class Image(models.Model):
     author = models.CharField(max_length=30,null=False,blank=False)
     timestamp = models.DateTimeField(auto_now_add=True,auto_now=False)
     update = models.DateTimeField(auto_now_add=False,auto_now=True)
-    category = models.ForeignKey(Category,on_delete=models.CASCADE) 
-    location = models.ForeignKey(Location,on_delete=models.CASCADE,default=1)  
+    category = models.ForeignKey('Category',on_delete=models.CASCADE) 
+    location = models.ForeignKey('Location',on_delete=models.CASCADE,default=1)  
     
 
     def __str__(self):
