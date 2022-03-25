@@ -1,8 +1,6 @@
-<div class="separator">
-    <h3 class="capitalize dark-text">Album <b class="yellow-text">Photos</b> </h3>
-</div>
+{% if location_img %}
 <div class="card-columns" id="view">
-    {% for img in images %}
+    {% for img in location_img %}
     <a>
         <div class="card img-responsive" data-toggle="modal" data-target="#modal1{{img.id}}">
             <img src="{{img.image.url}}" alt="{{img.name}}" class="img-fluid">
@@ -38,7 +36,7 @@
                     </div>
                 </div>
                 <div class="modal-footer justify-content-center">
-                    <!-- <button type="button" name="button" class="btn btn-primary btn-sm mr-4" value="https://collinsgallery.herokuapp.com{{img.image.url}}" onclick="copylink(this.value)">Copy Image Link</button> -->
+                    <button type="button" name="button" class="btn btn-primary btn-sm mr-4" value="{{img.image.url}}" onclick="copylink(this.value)">Copy Image Link</button>
                     <!--Facebook-->
                     <a type="button" class="btn-floating btn-sm btn-fb"><i class="fab fa-facebook-f black-text"></i></a>
                     <!--Twitter-->
@@ -54,3 +52,4 @@
     </div>
     {% endfor %}
 </div>
+{% endif %}
