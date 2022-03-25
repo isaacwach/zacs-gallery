@@ -17,16 +17,6 @@
                     <span class="sr-only">(current)</span>
                 </a>
             </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle white-text" id="navbarDropdownMenuLink"  data-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="false">Location
-                </a>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                    {% for location in location %}
-                    <a class="dropdown-item" href="/?location={{location.id}}">{{location.name}}</a>
-                    {%endfor%}
-                </div>
-            </li>
         </ul>
         <form class="form-inline my-2 my-md-0"  action="/search" role="search">
             <input class="form-control mr-sm-2" type="search" placeholder="Search by Category" name="search" aria-label="Search">

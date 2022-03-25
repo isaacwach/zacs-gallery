@@ -1,3 +1,6 @@
 .form-inline{
     display: flex;
 }
+.albums {
+    display: flex;
+}
