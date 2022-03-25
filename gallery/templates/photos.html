@@ -1,9 +1,9 @@
 
 <div class="container albums">
-    
+    <h3 style="text-align:center; margin-top:20px; font-size:50px;">Photo Gallery</h3>
     <div class="row">
         {% for img in images %}
-        <div class="col-md-4 py-2">
+        <div class="col-md-4 col-sm-12 py-2">
             <div class="card" style="width: 25rem; min-height: 25rem;">
             
                 <img class="card-img-top" src="{{img.image.url}}" alt="Card image cap" style="height: 22rem">
