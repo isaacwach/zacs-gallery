@@ -1,17 +1,21 @@
 
 <div class="container albums">
-    {% for img in images %}
-    <div class="row align-items-stretch justify-content-start card-deck">
-        <div class="card" style="width: 25rem;">
+    
+    <div class="row">
+        {% for img in images %}
+        <div class="col-md-4 py-2">
+            <div class="card" style="width: 25rem; min-height: 25rem;">
             
-            <img class="card-img-top" src="{{img.image.url}}" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">{{img.title}}</h5>
-              <a href="#" class="btn btn-primary">View more</a>
+                <img class="card-img-top" src="{{img.image.url}}" alt="Card image cap" style="height: 22rem">
+                <div class="card-body">
+                  <h5 class="card-title">{{img.title}}</h5>
+                  <a href="#" class="btn btn-primary">View more</a>
+                </div>
+                      
             </div>
-                  
         </div>
+        {% endfor%}
     </div>
-    {% endfor%}
+    
 </div>
 
