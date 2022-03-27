@@ -1,21 +1,41 @@
-
 <div class="container albums">
     <h3 style="text-align:center; margin-top:20px; font-size:50px;">Photo Gallery</h3>
     <div class="row">
         {% for img in images %}
         <div class="col-md-4 col-sm-12 py-2">
             <div class="card" style="width: 25rem; min-height: 25rem;">
-            
+
                 <img class="card-img-top" src="{{img.image.url}}" alt="Card image cap" style="height: 22rem">
                 <div class="card-body">
-                  <h5 class="card-title">{{img.title}}</h5>
-                  <a href="#" class="btn btn-primary">View more</a>
+                    <h5 class="card-title">{{img.title}}</h5>
+                    <a href="#" class="btn btn-primary" onclick="openForm()">View more</a>
                 </div>
-                      
+
+            </div>
+            <div class="form-popup" id="myForm">
+                <form action="/action_page.php" class="form-container">
+                    <h1>Photo Details</h1>
+                    <p><span>Title:</span> {{img.title}}</p>
+                    <p><span>Description</span>: {{img.description}}</p>
+                    <p><span>Time:</span> {{img.timestamp}}</p>
+                    <p><span>Update:</span> {{img.update}}</p>
+                    <p><span>Category:</span> {{img.category}}</p>
+                    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+                </form>
             </div>
         </div>
         {% endfor%}
     </div>
-    
+
 </div>
 
+
+<script>
+    function openForm() {
+        document.getElementById("myForm").style.display = "block";
+    }
+
+    function closeForm() {
+        document.getElementById("myForm").style.display = "none";
+    }
+</script>
