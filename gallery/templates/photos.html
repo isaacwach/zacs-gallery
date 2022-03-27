@@ -12,6 +12,7 @@
                 </div>
 
             </div>
+            {% if img.image%}
             <div class="form-popup" id="myForm">
                 <form action="/action_page.php" class="form-container">
                     <h1>Photo Details</h1>
@@ -23,6 +24,7 @@
                     <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
                 </form>
             </div>
+            {% endif%}
         </div>
         {% endfor%}
     </div>
