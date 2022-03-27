@@ -89,6 +89,7 @@ if config('MODE')=="dev":
         'NAME': config('DB_NAME'),
         'USER': config('DB_USER'),
         'HOST': config('DB_HOST'),
+        'PORT':''
     }
 }
 else:
