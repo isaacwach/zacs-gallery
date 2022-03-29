@@ -8,7 +8,7 @@ This application is a personal gallery app. The admin can add various categories
 * Search for different categories   
 * Copy a link to the photo to share with my friends.  
 * View photos based on the location they were taken. 
-![Landing page photo](https://github.com/isaacwach/Spicy-pitches/blob/master/app/static/photos/pitches.png)
+![Landing page photo](https://github.com/isaacwach/zacs-gallery/blob/master/images/Screenshot_2022-03-29_12-23-22.png)
 ## Author information
 I am a full stack developer, with impeccable skills in web development, UI design, and problem solving skills using algorithms. Besides, i have knowlege in enterprise development, financial accounting and business management.
 
